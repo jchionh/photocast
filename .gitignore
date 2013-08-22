@@ -1,0 +1,67 @@
+.idea/
+gpush-gh-pages
+.settings/
+
+# application data file
+# sowpods_3_5.txt
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IntelliJ Files #
+.idea/workspace.xml
+.idea/tasks.xml
+*.iws
+
+# mac specific
+.DS_Store
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+#Eclipse
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
