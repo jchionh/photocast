@@ -1,8 +1,9 @@
-package net.jzapper.android.photocast;
+package net.jzapper.android.photocast.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import com.google.cast.CastDevice;
+import net.jzapper.android.photocast.R;
 
 public class PhotocastActivity extends Activity {
 

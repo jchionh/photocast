@@ -4,10 +4,20 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
+
+    <android.support.v7.app.MediaRouteButton
+            android:id="@+id/media_route_button"
+            android:mediaRouteTypes="user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            />
+
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, PhotocastActivity"
+            android:text="Hello World, photocast activity!"
             />
+
 </LinearLayout>
 
