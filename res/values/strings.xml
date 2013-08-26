@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">photocast</string>
+    <string name="app_name">xlbcast</string>
+    <string name="scan_failed_network_error">Scan failed: Network error.</string>
+    <string name="ok">OK</string>
+    <string name="device_discover_title">Available devices:</string>
 </resources>
