@@ -2,7 +2,6 @@ package net.jzapper.android.photocast.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import com.google.cast.*;
 import net.jzapper.android.photocast.R;
 import net.jzapper.android.photocast.app.PhotocastApp;
@@ -48,7 +47,7 @@ public class PhotocastActivity extends Activity  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        //selectDevice();
+        selectDevice();
     }
 
     /**
