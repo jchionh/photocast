@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<title>Photocast</title>
+
+<!--
+<script src="https://www.gstatic.com/cast/js/receiver/09/cast_receiver.js"></script>
+-->
+
+<script type="text/javascript">
+
+    window.onload = onLoad;
+    var count = 0;
+
+    function updateTime() {
+        var timeElement = document.getElementById('time');
+        count++;
+        timeElement.innerText = 'count: ' + count;
+        if (count > 60) {
+            window.close();
+        }
+
+    }
+
+    /**
+    * Initializes the receiver application and game objects, and starts the
+    * receiver.
+    */
+
+    function onLoad() {
+
+    /*
+        var receiver = new cast.receiver.Receiver(
+                            '530efe8a-f8e2-4cef-aecb-7d3dc8d5463b',
+                            [ 'commands' ],
+                            "",
+                            5);
+        var remoteMedia = new cast.receiver.RemoteMedia();
+        remoteMedia.addChannelFactory(receiver.createChannelFactory('commands'));
+        receiver.start();
+    */
+
+        console.log('receiver started.');
+        setInterval(updateTime, 1000);
+    }
+
+
+
+</script>
+<body>
+<img    src="http://jchionh-photocast-images.s3-website-us-east-1.amazonaws.com/ssr_71.jpg"
+        width="1280px"
+        height="720px"
+        style="position: absolute; top: 0px; left: 0px"></img>
+<div style="position:absolute; top: 20px; left: 40px; color: #FF00FF">Hello, xlbcast!</div>
+<div id="time" style="position: absolute; top: 60px; left: 40px; color: #FF00FF">Time Area</div>
+
+</body>
+
+
+</html>
