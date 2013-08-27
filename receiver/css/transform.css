@@ -4,12 +4,12 @@ html, body {
 
 #testImage {
 
-    animation-name:             seesaw;
+    animation-name:             fades;
     animation-duration:         5.0s;
     animation-iteration-count:  infinite;
     animation-timing-function: linear;
 
-    -webkit-animation-name:             seesaw;
+    -webkit-animation-name:             fades;
     -webkit-animation-duration:         5.0s;
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function: linear;
@@ -37,4 +37,15 @@ html, body {
     0% { left: 0px; }
     50% { left: 500px; }
     100% { left: 0px; }
+}
+
+@-webkit-keyframes fades {
+    0% { opacity: 1.0; }
+    50% { left: 0.3; }
+    100% { left: 1.0; }
+}
+@keyframes fades {
+    0% { opacity: 1.0; }
+    50% { left: 0.3; }
+    100% { left: 1.0; }
 }
