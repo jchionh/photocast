@@ -41,11 +41,11 @@ html, body {
 
 @-webkit-keyframes fades {
     0% { opacity: 1.0; }
-    50% { left: 0.3; }
-    100% { left: 1.0; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1.0; }
 }
 @keyframes fades {
     0% { opacity: 1.0; }
-    50% { left: 0.3; }
-    100% { left: 1.0; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1.0; }
 }
