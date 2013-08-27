@@ -3,6 +3,12 @@ html, body {
 }
 
 #testImage {
+
+    animation-name:             spin;
+    animation-duration:         5.0s;
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear;
+
     -webkit-animation-name:             spin;
     -webkit-animation-duration:         5.0s;
     -webkit-animation-iteration-count:  infinite;
