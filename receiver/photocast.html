@@ -20,7 +20,12 @@
         var timeElement = document.getElementById('time');
         count++;
         timeElement.innerText = 'count: ' + count;
-        if (count > 60) {
+
+        if (count == 30) {
+            window.location.reload();
+        }
+
+        if (count > 90) {
             window.close();
         }
 
