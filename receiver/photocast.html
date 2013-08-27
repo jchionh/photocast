@@ -4,8 +4,46 @@
 <title>Photocast</title>
 <script src="https://www.gstatic.com/cast/js/receiver/09/cast_receiver.js"></script>
 
+<script type="text/javascript">
+
+    window.onload = onLoad;
+    var count = 0;
+
+    function updateTime() {
+        var timeElement = document.getElementById('time');
+        count++;
+        timeElement.innerText = 'count: ' + count;
+    }
+
+    /**
+    * Initializes the receiver application and game objects, and starts the
+    * receiver.
+    */
+
+    function onLoad() {
+
+        var receiver = new cast.receiver.Receiver(
+                            '530efe8a-f8e2-4cef-aecb-7d3dc8d5463b',
+                            [ 'commands' ],
+                            "",
+                            5);
+        var remoteMedia = new cast.receiver.RemoteMedia();
+        remoteMedia.addChannelFactory(receiver.createChannelFactory('commands'));
+        receiver.start();
+
+        console.log('receiver started.');
+        setInterval(updateTime, 1000);
+    }
+
+
+
+</script>
+
 <body>
 <div>Hello, Photocast!</div>
+
+<div id="time">Time Area</div>
+
 </body>
 
 </html>
