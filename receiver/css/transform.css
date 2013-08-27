@@ -1,3 +1,7 @@
+html, body {
+    overflow: hidden;
+}
+
 #testImage {
     transform: rotate(30deg);
     -ms-transform: rotate(30deg); /* IE 9 */
