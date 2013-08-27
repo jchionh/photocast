@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<title>Photocast</title>
+<head>
+    <!-- get the css in -->
+    <link rel="stylesheet" type="text/css" href="css/transform.css" />
+
+    <title>Photocast</title>
+</head>
+
 
 <!--
 <script src="https://www.gstatic.com/cast/js/receiver/09/cast_receiver.js"></script>
@@ -42,6 +48,7 @@
 
         console.log('receiver started.');
         setInterval(updateTime, 1000);
+        mainInit();
     }
 
 
@@ -51,11 +58,28 @@
 <img    src="http://jchionh-photocast-images.s3-website-us-east-1.amazonaws.com/ssr_71.jpg"
         width="1280px"
         height="720px"
-        style="position: absolute; top: 0px; left: 0px"></img>
+        style="position: absolute; top: 0px; left: 0px"
+        id="testImage"/>
+
 <div style="position:absolute; top: 20px; left: 40px; color: #FF00FF">Hello, xlbcast!</div>
 <div id="time" style="position: absolute; top: 60px; left: 40px; color: #FF00FF">Time Area</div>
 
+
+
+<!-- js sources -->
+<script src="js/photocast.js"></script>
+<script src="js/utils/extend.js"></script>
+
+<!-- run states -->
+<script src="js/runstate/BaseRunState.js"></script>
+<script src="js/runstate/StateRunner.js"></script>
+
+<!-- main -->
+<script src="js/main.js"></script>
+
 </body>
+
+
 
 
 </html>
