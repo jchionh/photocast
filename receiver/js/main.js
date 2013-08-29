@@ -29,8 +29,15 @@ function mainLoop(timestamp) {
     // calculate our delta
     pc.gDelta = Math.max(0.0, timestamp - pc.gPrevTimestamp);
     pc.gPrevTimestamp = timestamp;
-
     pc.gDeltaTimeAreaElement.innerText = 'dt: ' + pc.gDelta + ' ms';
 
+    // tell our window to call us back the next frames
     window.requestAnimFrame(mainLoop, pc.gPhotoAreaElement);
+
+    // update state runner
+    pc.gStateRunner.update(pc.gDelta);
+
+    // states to render
+    pc.gStateRunner.render(pc.gDelta, null);
+    
 }
