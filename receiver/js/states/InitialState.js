@@ -16,11 +16,11 @@ pc.states.InitialState = function() {
     // call the super class init
     pc.runstate.BaseRunState.call(this, pc.runstate.RunFlag.SUSPEND_LOWER);
 
-    this.node = document.createElement('button');
+    this.node = document.createElement('div');
     this.node.innerHTML = 'Whee!!!';
     this.node.setAttribute('class', 'moveable');
     this.nodePos = [0, 0];
-    this.speed = 0.5;
+    this.speed = 1.0;
     this.node.setAttribute('style', 'left: ' + Math.floor(this.nodePos[0]) + 'px; top: ' + Math.floor(this.nodePos[1]) + 'px;');
 };
 
