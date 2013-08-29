@@ -20,7 +20,7 @@ pc.states.InitialState = function() {
     this.node.innerHTML = 'Whee!!!';
     this.node.setAttribute('class', 'moveable');
     this.nodePos = [0, 0];
-    this.speed = 1.0;
+    this.speed = 1.5;
     this.node.setAttribute('style', 'left: ' + Math.floor(this.nodePos[0]) + 'px; top: ' + Math.floor(this.nodePos[1]) + 'px;');
 };
 
