@@ -15,7 +15,6 @@
         window.onload = onLoad;
         var count = 0;
 
-        /*
         function updateTime() {
             var timeElement = document.getElementById('countArea');
             count++;
@@ -24,9 +23,7 @@
             if (count > 60) {
                 window.close();
             }
-
         }
-        */
 
         /**
         * Initializes the receiver application and game objects, and starts the
@@ -44,7 +41,7 @@
             receiver.start();
 
             console.log('receiver started.');
-            //setInterval(updateTime, 1000);
+            setInterval(updateTime, 1000);
 
             mainInit();
         }
@@ -62,6 +59,7 @@
 <div id="photoArea"></div>
 <div id="messageArea">Hello, xlbcast!</div>
 <div id="countArea">Time Area</div>
+<div id="deltaTimeArea">Delta Time Area</div>
 
 
 <!-- js sources -->

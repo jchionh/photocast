@@ -12,6 +12,7 @@ function mainInit() {
     pc.gDelta = 0;
 
     pc.gCountAreaElement = document.getElementById('countArea');
+    pc.gDeltaTimeAreaElement = document.getElementById('deltaTimeArea');
     pc.gPhotoAreaElement = document.getElementById('photoArea')
 
     // call our mainloop the first time with a current timestamp
@@ -29,7 +30,7 @@ function mainLoop(timestamp) {
     pc.gDelta = Math.max(0.0, timestamp - pc.gPrevTimestamp);
     pc.gPrevTimestamp = timestamp;
 
-    pc.gCountAreaElement.innerText = 'dt: ' + pc.gDelta + ' ms';
+    pc.gDeltaTimeAreaElement.innerText = 'dt: ' + pc.gDelta + ' ms';
 
     window.requestAnimFrame(mainLoop, pc.gPhotoAreaElement);
 }
