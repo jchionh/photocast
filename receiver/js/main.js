@@ -15,6 +15,10 @@ function mainInit() {
     pc.gDeltaTimeAreaElement = document.getElementById('deltaTimeArea');
     pc.gPhotoAreaElement = document.getElementById('photoArea')
 
+
+    var initialRunState = new pc.states.InitialState();
+    pc.gStateRunner.addState(initialRunState);
+
     // call our mainloop the first time with a current timestamp
     mainLoop(Date.now());
 
