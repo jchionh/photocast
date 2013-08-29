@@ -11,6 +11,9 @@ function mainInit() {
     pc.gPrevTimestamp = 0;
     pc.gDelta = 0;
 
+    pc.gCountAreaElement = document.getElementById('countArea');
+    pc.gPhotoAreaElement = document.getElementById('photoArea')
+
     // call our mainloop the first time with a current timestamp
     mainLoop(Date.now());
 
@@ -26,4 +29,7 @@ function mainLoop(timestamp) {
     pc.gDelta = Math.max(0.0, timestamp - pc.gPrevTimestamp);
     pc.gPrevTimestamp = timestamp;
 
+    pc.gCountAreaElement.innerText = 'dt: ' + pc.gDelta + ' ms';
+
+    window.requestAnimFrame(mainLoop, pc.gPhotoAreaElement);
 }
