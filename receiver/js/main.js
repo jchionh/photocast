@@ -19,6 +19,7 @@ function mainInit() {
     var initialRunState = new pc.states.InitialState();
     pc.gStateRunner.addState(initialRunState);
 
+
     // call our mainloop the first time with a current timestamp
     mainLoop(Date.now());
 
@@ -44,4 +45,38 @@ function mainLoop(timestamp) {
     // states to render
     pc.gStateRunner.render(pc.gDelta, null);
     
+}
+
+/**
+ * Init the reciever to start the communications channel
+ */
+function initReceiver() {
+
+    var chromecastApp = new cast.receiver.Receiver(
+        pc.chromecast.CAST_APP_NAME,
+        [ pc.chromecast.CAST_NAMESPACE ],
+        "",
+        5);
+    /*
+     var remoteMedia = new cast.receiver.RemoteMedia();
+     remoteMedia.addChannelFactory(receiver.createChannelFactory(pc.chromecast.CAST_NAMESPACE));
+     */
+
+    var messageHandler = new pc.message.MessageHandler();
+    var channelHandler = new cast.receiver.ChannelHandler('PhotocastDebug');
+    channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, messageHandler.onMessage.bind(messageHandler));
+    channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, messageHandler.onChannelOpened.bind(messageHandler));
+    channelHandler.addEventListener(cast.receiver.Channel.EventType.CLOSED, messageHandler.onChannelClosed.bind(messageHandler));
+
+    /*
+    this.mChannelHandler.addEventListener(
+        cast.receiver.Channel.EventType.OPEN,
+        this.onChannelOpened.bind(this));
+    this.mChannelHandler.addEventListener(
+        cast.receiver.Channel.EventType.CLOSED,
+        this.onChannelClosed.bind(this));
+        */
+
+    chromecastApp.start();
+
 }
