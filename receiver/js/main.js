@@ -63,9 +63,34 @@ function initReceiver() {
 
     var messageHandler = new pc.message.MessageHandler();
     var channelHandler = new cast.receiver.ChannelHandler('PhotocastDebug');
+    /*
     channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, messageHandler.onMessage);
     channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, messageHandler.onChannelOpened);
     channelHandler.addEventListener(cast.receiver.Channel.EventType.CLOSED, messageHandler.onChannelClosed);
+    */
+
+    channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, function(event) {
+        var message = event.message;
+        var channel = event.target;
+
+        var messageArea = document.getElementById('messageArea');
+        messageArea.innerHTML = JSON.stringify(message);
+
+        console.log(JSON.stringify(message));
+    });
+
+    channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, function(event) {
+        var messageArea = document.getElementById('messageArea');
+        messageArea.innerHTML = 'onChannelOpened';
+        console.log('onChannelOpened');
+    });
+
+    channelHandler.addEventListener(cast.receiver.Channel.EventType.CLOSED, function(event) {
+        var messageArea = document.getElementById('messageArea');
+        messageArea.innerHTML = 'onChannelClosed';
+        console.log('onChannelClosed');
+    });
+
 
     /*
     this.mChannelHandler.addEventListener(
