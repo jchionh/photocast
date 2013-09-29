@@ -104,5 +104,7 @@ function initReceiver() {
 
     channelHandler.addChannelFactory(chromecastApp.createChannelFactory(pc.chromecast.CAST_NAMESPACE));
 
+    console.log("Added channel factory!!!!!!");
+
     chromecastApp.start();
 }
