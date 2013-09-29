@@ -51,7 +51,6 @@ function mainLoop(timestamp) {
  * Init the reciever to start the communications channel
  */
 function initReceiver() {
-
     var chromecastApp = new cast.receiver.Receiver(
         pc.chromecast.CAST_APP_NAME,
         [ pc.chromecast.CAST_NAMESPACE ],
@@ -78,5 +77,4 @@ function initReceiver() {
         */
 
     chromecastApp.start();
-
 }
