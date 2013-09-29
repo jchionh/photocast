@@ -1,10 +1,8 @@
 CACHE MANIFEST
-
 # Cache manifest version 1.0
 
-CACHE
-
+CACHE:
 #no cache
 
-NETWORK
+NETWORK:
 *
