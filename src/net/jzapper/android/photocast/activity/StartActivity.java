@@ -31,6 +31,7 @@ public class StartActivity extends Activity {
     TextView statusView;
     Button connectButton;
     Button disconnectButton;
+    PhotocastMessageStream messageStream = new PhotocastMessageStream();
 
     private DeviceSelectionDialog deviceSelectionDialog;
     private ApplicationSession applicationSession;
@@ -44,10 +45,9 @@ public class StartActivity extends Activity {
                 return;
             }
 
-            PhotocastMessageStream stream = new PhotocastMessageStream();
             ApplicationChannel channel = applicationSession.getChannel();
-            channel.attachMessageStream(stream);
-            stream.sendTestMessage();
+            channel.attachMessageStream(messageStream);
+            Logger.d(TAG, "attached Message stream.");
         }
 
         @Override
@@ -207,5 +207,9 @@ public class StartActivity extends Activity {
             CastInfo.castContext = null;
         }
         super.onStop();
+    }
+
+    public void testMessage(View view) {
+        messageStream.sendTestMessage();
     }
 }

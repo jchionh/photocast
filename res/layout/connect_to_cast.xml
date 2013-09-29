@@ -29,5 +29,14 @@
             android:id="@+id/btn_disconnect" android:layout_gravity="left|center_vertical"
             android:onClick="disconnectDevice"/>
 
+    <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Test Message"
+            android:layout_gravity="left|center_vertical"
+            android:onClick="testMessage"/>
+
 
 </LinearLayout>

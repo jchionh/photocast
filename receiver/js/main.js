@@ -102,5 +102,7 @@ function initReceiver() {
         this.onChannelClosed.bind(this));
         */
 
+    channelHandler.addChannelFactory(chromecastApp.createChannelFactory(pc.chromecast.CAST_NAMESPACE));
+
     chromecastApp.start();
 }
