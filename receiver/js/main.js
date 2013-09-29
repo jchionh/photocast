@@ -63,6 +63,7 @@ function initReceiver() {
 
     var messageHandler = new pc.message.MessageHandler();
     var channelHandler = new cast.receiver.ChannelHandler('PhotocastDebug');
+    console.log('channelHandler debug: ' + channelHandler.getDebugString());
     /*
     channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, messageHandler.onMessage);
     channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, messageHandler.onChannelOpened);

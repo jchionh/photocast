@@ -1,0 +1,34 @@
+reating Application Cache with manifest http://jchionh.github.io/photocast/receiver/cache.manifest photocast.html:1
+Application Cache Checking event photocast.html:1
+Application Cache Downloading event photocast.html:1
+ [  0.423s] [cast.receiver.ChannelHandler] New channel factory added: 530efe8a-f8e2-4cef-aecb-7d3dc8d5463b to heartbeatChannelHandler
+ cast_receiver.js:55
+ [  0.490s] [cast.receiver.ConnectionService] Open connection service websocket: url=ws://localhost:8008/connection
+ cast_receiver.js:55
+ [  0.502s] [goog.net.WebSocket] Opening the WebSocket on ws://localhost:8008/connection
+ cast_receiver.js:55
+ [  0.510s] [cast.receiver.Receiver] Receiver started.
+ cast_receiver.js:55
+receiver started. photocast.html:36
+InitialSate::onStart InitialState.js:35
+Application Cache Progress event (0 of 3) http://jchionh.github.io/photocast/receiver/CACHE photocast.html:1
+Application Cache Error event: Resource fetch failed (404) http://jchionh.github.io/photocast/receiver/CACHE photocast.html:1
+ [  0.791s] [goog.net.WebSocket] WebSocket opened on ws://localhost:8008/connection
+ cast_receiver.js:55
+ [  0.798s] [cast.receiver.ConnectionService] Got event: d
+ cast_receiver.js:55
+ [  1.066s] [cast.receiver.ChannelHandler] New channel added: ws://localhost:8008/session?12 to heartbeatChannelHandler
+ cast_receiver.js:55
+ [  1.071s] [cast.receiver.ChannelOverWebSocket] Open websocket: url=ws://localhost:8008/session?12
+ cast_receiver.js:55
+ [  1.078s] [goog.net.WebSocket] Opening the WebSocket on ws://localhost:8008/session?12
+ cast_receiver.js:55
+ [  1.103s] [goog.net.WebSocket] WebSocket opened on ws://localhost:8008/session?12
+ cast_receiver.js:55
+ [  1.108s] [cast.receiver.ChannelOverWebSocket] Dispatch OPEN event to ws://localhost:8008/session?12
+ cast_receiver.js:55
+ [  1.112s] [cast.receiver.Channel] Dispatch OPEN event to ws://localhost:8008/session?12
+ cast_receiver.js:55
+ [  1.116s] [cast.receiver.Channel] Dispatch OPEN event to ws://localhost:8008/session?12
+ cast_receiver.js:55
+
