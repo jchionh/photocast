@@ -7,7 +7,7 @@ import android.support.v7.media.MediaRouteSelector;
 import android.support.v7.media.MediaRouter;
 import com.google.cast.*;
 import net.jzapper.android.photocast.R;
-import net.jzapper.android.photocast.app.PhotocastApp;
+import net.jzapper.android.photocast.chromecast.CastInfo;
 import net.jzapper.android.photocast.dialog.DeviceSelectionDialog;
 
 public class PhotocastMediaRouterActivity extends Activity implements MediaRouteAdapter {
@@ -91,7 +91,8 @@ public class PhotocastMediaRouterActivity extends Activity implements MediaRoute
                 CastDevice device = dialog.selectedDevice();
                 if (device != null) {
                     //setConnectedDeviceTextView(dialog.selectedDevice().getFriendlyName());
-                    PhotocastApp.getInstance().setCastDevice(device);
+                    CastInfo.castDevice = device;
+                    //PhotocastApp.getInstance().setCastDevice(device);
                     //findViewById(R.id.start).setEnabled(true);
                 } else {
                     //setConnectedDeviceTextView(

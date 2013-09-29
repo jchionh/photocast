@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">xlbcast</string>
+
+    <!-- connection to cast strings -->
     <string name="scan_failed_network_error">Scan failed: Network error.</string>
     <string name="ok">OK</string>
     <string name="device_discover_title">Available devices:</string>
+
+    <!-- app start activity strings -->
+    <string name="not_connected">Not connected to chromecast.</string>
+    <string name="connect_to_chromecast">Connect to chomecast</string>
+    <string name="disconnect_from_chromecast">Disconnect from chomecast</string>
+
+
 </resources>

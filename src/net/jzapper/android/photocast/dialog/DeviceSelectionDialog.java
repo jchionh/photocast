@@ -7,7 +7,7 @@ import com.google.cast.CastDevice;
 import com.google.cast.CastDeviceAdapter;
 import com.google.cast.DeviceManager;
 import net.jzapper.android.photocast.R;
-import net.jzapper.android.photocast.app.PhotocastApp;
+import net.jzapper.android.photocast.chromecast.CastInfo;
 
 /**
  * User: jchionh
@@ -47,7 +47,7 @@ public class DeviceSelectionDialog {
     public DeviceSelectionDialog(Context appContext) {
         context = appContext;
         castDeviceAdapter = new CastDeviceAdapter(context);
-        deviceManager = new DeviceManager(PhotocastApp.getInstance().getCastContext());
+        deviceManager = new DeviceManager(CastInfo.castContext);
 
         deviceManager.addListener(new DeviceManager.Listener() {
             @Override

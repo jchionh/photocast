@@ -4,6 +4,9 @@ build
 gpush-gh-pages
 .settings/
 
+# do not include our app name
+CastAppName.java
+
 # application data file
 # sowpods_3_5.txt
 
