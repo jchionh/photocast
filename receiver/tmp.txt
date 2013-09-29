@@ -32,3 +32,26 @@ Application Cache Error event: Resource fetch failed (404) http://jchionh.github
  [  1.116s] [cast.receiver.Channel] Dispatch OPEN event to ws://localhost:8008/session?12
  cast_receiver.js:55
 
+
+
+onChannelOpened main.js:86
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"} main.js:80
+{"data":"test_data","action":"test_action"}
