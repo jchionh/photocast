@@ -15,14 +15,11 @@ function mainInit() {
     pc.gDeltaTimeAreaElement = document.getElementById('deltaTimeArea');
     pc.gPhotoAreaElement = document.getElementById('photoArea')
 
-
     var initialRunState = new pc.states.InitialState();
     pc.gStateRunner.addState(initialRunState);
 
-
     // call our mainloop the first time with a current timestamp
     mainLoop(Date.now());
-
 }
 
 /**
@@ -30,7 +27,6 @@ function mainInit() {
  * @param timestamp
  */
 function mainLoop(timestamp) {
-
     // calculate our delta
     pc.gDelta = Math.max(0.0, timestamp - pc.gPrevTimestamp);
     pc.gPrevTimestamp = timestamp;
@@ -44,7 +40,6 @@ function mainLoop(timestamp) {
 
     // states to render
     pc.gStateRunner.render(pc.gDelta, null);
-    
 }
 
 /**
@@ -62,43 +57,4 @@ function initReceiver() {
     pc.gMessageHandler.setupChannelFactory(pc.gReceiver);
     // now start our app!
     pc.gReceiver.start();
-
-    //var channelHandler = new cast.receiver.ChannelHandler('PhotocastDebug');
-    //console.log('channelHandler debug: ' + channelHandler.getDebugString());
-    /*
-    channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, messageHandler.onMessage);
-    channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, messageHandler.onChannelOpened);
-    channelHandler.addEventListener(cast.receiver.Channel.EventType.CLOSED, messageHandler.onChannelClosed);
-    */
-
-    /*
-    channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, function(event) {
-        var message = event.message;
-        var channel = event.target;
-
-        var messageArea = document.getElementById('messageArea');
-        messageArea.innerHTML = JSON.stringify(message);
-
-        console.log(JSON.stringify(message));
-    });
-
-    channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, function(event) {
-        var messageArea = document.getElementById('messageArea');
-        messageArea.innerHTML = 'onChannelOpened';
-        console.log('onChannelOpened');
-    });
-
-    channelHandler.addEventListener(cast.receiver.Channel.EventType.CLOSED, function(event) {
-        var messageArea = document.getElementById('messageArea');
-        messageArea.innerHTML = 'onChannelClosed';
-        console.log('onChannelClosed');
-    });
-    */
-
-
-    //channelHandler.addChannelFactory(pc.gReceiver.createChannelFactory(pc.chromecast.CAST_PROTOCOL));
-
-    //console.log("Added channel factory!!!!!!");
-
-    //pc.gReceiver.start();
 }
