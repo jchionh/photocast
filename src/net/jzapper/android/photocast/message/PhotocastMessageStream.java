@@ -22,7 +22,7 @@ public class PhotocastMessageStream extends MessageStream {
 
 
     public PhotocastMessageStream() throws IllegalArgumentException {
-        super(CastInfo.CAST_NAMESPACE);
+        super(CastInfo.CAST_PROTOCOL);
     }
 
     public final void sendTestMessage() {

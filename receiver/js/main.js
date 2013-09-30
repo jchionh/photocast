@@ -51,25 +51,27 @@ function mainLoop(timestamp) {
  * Init the reciever to start the communications channel
  */
 function initReceiver() {
-    var chromecastApp = new cast.receiver.Receiver(
-        pc.chromecast.CAST_APP_NAME,
-        [ pc.chromecast.CAST_NAMESPACE ],
+    pc.gReceiver = new cast.receiver.Receiver(pc.chromecast.CAST_APP_NAME,
+        [ pc.chromecast.CAST_PROTOCOL ],
         "",
         5);
-    /*
-     var remoteMedia = new cast.receiver.RemoteMedia();
-     remoteMedia.addChannelFactory(receiver.createChannelFactory(pc.chromecast.CAST_NAMESPACE));
-     */
 
-    var messageHandler = new pc.message.MessageHandler();
-    var channelHandler = new cast.receiver.ChannelHandler('PhotocastDebug');
-    console.log('channelHandler debug: ' + channelHandler.getDebugString());
+    // new our message handler
+    pc.gMessageHandler = new pc.message.MessageHandler();
+    // setup the channel factory with our app
+    pc.gMessageHandler.setupChannelFactory(pc.gReceiver);
+    // now start our app!
+    pc.gReceiver.start();
+
+    //var channelHandler = new cast.receiver.ChannelHandler('PhotocastDebug');
+    //console.log('channelHandler debug: ' + channelHandler.getDebugString());
     /*
     channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, messageHandler.onMessage);
     channelHandler.addEventListener(cast.receiver.Channel.EventType.OPEN, messageHandler.onChannelOpened);
     channelHandler.addEventListener(cast.receiver.Channel.EventType.CLOSED, messageHandler.onChannelClosed);
     */
 
+    /*
     channelHandler.addEventListener(cast.receiver.Channel.EventType.MESSAGE, function(event) {
         var message = event.message;
         var channel = event.target;
@@ -91,20 +93,12 @@ function initReceiver() {
         messageArea.innerHTML = 'onChannelClosed';
         console.log('onChannelClosed');
     });
+    */
 
 
-    /*
-    this.mChannelHandler.addEventListener(
-        cast.receiver.Channel.EventType.OPEN,
-        this.onChannelOpened.bind(this));
-    this.mChannelHandler.addEventListener(
-        cast.receiver.Channel.EventType.CLOSED,
-        this.onChannelClosed.bind(this));
-        */
+    //channelHandler.addChannelFactory(pc.gReceiver.createChannelFactory(pc.chromecast.CAST_PROTOCOL));
 
-    channelHandler.addChannelFactory(chromecastApp.createChannelFactory(pc.chromecast.CAST_NAMESPACE));
+    //console.log("Added channel factory!!!!!!");
 
-    console.log("Added channel factory!!!!!!");
-
-    chromecastApp.start();
+    //pc.gReceiver.start();
 }

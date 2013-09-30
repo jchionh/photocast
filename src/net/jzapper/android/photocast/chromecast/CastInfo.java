@@ -14,6 +14,6 @@ public class CastInfo {
 
     public static CastContext castContext = null;
     public static CastDevice castDevice = null;
-    public static final String CAST_NAMESPACE = "net.jzapper.android.photocast";
+    public static final String CAST_PROTOCOL = "net.jzapper.android.photocast";
 
 }

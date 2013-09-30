@@ -9,3 +9,5 @@ var pc = pc || {};
 
 pc.gPrevTimestamp = 0;
 pc.gDelta = 0;
+pc.gReceiver = null;
+pc.gMessageHandler = null;
