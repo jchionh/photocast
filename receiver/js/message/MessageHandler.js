@@ -48,7 +48,7 @@ pc.message.MessageHandler.prototype.onMessage = function(event) {
     image.style.position = 'absolute';
     image.style.left = '100px';
     image.style.top = '100px';
-    image.className = 'testImage';
+    image.id = 'testImage';
 
     var photoArea = document.getElementById('photoArea');
     photoArea.appendChild(image);
