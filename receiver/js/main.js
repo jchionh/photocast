@@ -24,7 +24,7 @@ function mainInit() {
 
 /**
  * this is the mainloop, runs with timestamp
- * @param timestamp
+ * @param {Number} timestamp
  */
 function mainLoop(timestamp) {
     // calculate our delta
