@@ -28,12 +28,12 @@
 
 @-webkit-keyframes seesaw {
     0% { left: 0px; }
-    50% { left: 500px; }
+    50% { left: 1000px; }
     100% { left: 0px; }
 }
 @keyframes seesaw {
     0% { left: 0px; }
-    50% { left: 500px; }
+    50% { left: 1000px; }
     100% { left: 0px; }
 }
 
