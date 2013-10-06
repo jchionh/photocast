@@ -62,4 +62,11 @@ pc.states.InitialState.prototype.onUpdate = function(dt) {
 
     this.node.setAttribute('style', 'left: ' + Math.floor(this.nodePos[0]) + 'px; top: ' + Math.floor(this.nodePos[1]) + 'px;');
 
+    var photos = document.getElementsByClassName('moveable');
+    for (int i = 0; i < photos.length; ++i) {
+        var photo = photos.item(i);
+        photo.style.top = Math.floor(this.nodePos[0]) + 'px';
+        photo.style.left = Math.floor(this.nodePos[1]) + 'px';
+    }
+
 }

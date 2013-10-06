@@ -48,7 +48,8 @@ pc.message.MessageHandler.prototype.onMessage = function(event) {
     image.style.position = 'absolute';
     image.style.left = Math.floor((Math.random() * 1280)) + 'px';
     image.style.top = Math.floor((Math.random() * 720)) + 'px';
-    image.id = 'testImage';
+    //image.id = 'testImage';
+    image.className = 'moveable';
 
     var photoArea = document.getElementById('photoArea');
     photoArea.appendChild(image);
