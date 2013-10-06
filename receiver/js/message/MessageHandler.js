@@ -39,6 +39,20 @@ pc.message.MessageHandler.prototype.onMessage = function(event) {
     var message = event.message;
     var channel = event.target;
     console.log('********onMessage********' + JSON.stringify(message));
+
+    // now hack an image and put it on screen
+    var image = new Image();
+    image.src = 'http://jchionh-photocast-images.s3-website-us-east-1.amazonaws.com/ssr_71.jpg';
+    image.width = 128;
+    image.height = 72;
+    image.style.position = 'absolute';
+    image.style.left = '100px';
+    image.style.top = '100px';
+    image.className = 'testImage';
+
+    var photoArea = document.getElementById('photoArea');
+    photoArea.appendChild(image);
+
 };
 
 /**
