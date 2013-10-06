@@ -42,9 +42,9 @@ pc.message.MessageHandler.prototype.onMessage = function(event) {
 
     // now hack an image and put it on screen
     var image = new Image();
-    image.src = 'http://jchionh-photocast-images.s3-website-us-east-1.amazonaws.com/tos_256.jpg';
-    image.width = 256;
-    image.height = 256;
+    image.src = 'http://jchionh-photocast-images.s3-website-us-east-1.amazonaws.com/tos_512.jpg';
+    image.width = 512;
+    image.height = 512;
     image.style.position = 'absolute';
     image.style.left = Math.floor((Math.random() * 1280)) + 'px';
     image.style.top = Math.floor((Math.random() * 720)) + 'px';
